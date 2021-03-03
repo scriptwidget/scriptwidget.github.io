@@ -59,7 +59,7 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title} - Create Widgets for iOS using JSX label style in JavaScript`}
       description="ScriptWidget - Create Widgets for iOS using JSX label style in JavaScript">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
