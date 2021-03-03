@@ -1,6 +1,6 @@
 module.exports = {
   title: 'ScriptWidget',
-  tagline: 'Create Widgets using JSX label style in JavaScript',
+  tagline: 'Create Widgets for iOS using JSX label style in JavaScript',
   url: 'https://scriptwidget.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
