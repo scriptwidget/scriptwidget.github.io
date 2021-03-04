@@ -37,12 +37,12 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Style Guide',
+              label: 'Get Started',
               to: 'docs/',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: 'Documents',
+              to: 'docs/',
             },
           ],
         },
