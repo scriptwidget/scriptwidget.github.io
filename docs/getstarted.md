@@ -1,15 +1,270 @@
 ---
 id: doc-getstarted
-title: Get Started
-sidebar_label: Get Started
+title: Get started
+sidebar_label: Get started
 slug: /
 ---
 
 
 
 
-## Intro.
-
+## Introduction
 
 
 hello
+
+
+## Screenshots
+
+
+![img](../static/img/screenshot.jpg)
+
+## Templates
+
+- Battery Percent: Display system battery percentage
+- Clock: Display Clock Time
+- Image: Display Image/Photo
+- Is Friday Today: Demo for how to check is friday today
+- Weather: Demo for how get current weather for city
+- Year Days Left: Demo for how to display how many days left this year
+
+
+## Components
+
+### text
+
+```
+    <text font="title">Hello ScriptWidget</text>
+    <text font="caption" color="red">
+      Hello ScriptWidget
+    </text>
+    <text font="caption" background="blue" color="white">
+      Hello ScriptWidget
+    </text>
+```
+
+Attributes:
+
+- font
+- color
+- #general attributes
+
+
+### image
+
+```
+    <vstack>
+        <image systemName="mosaic.fill" />
+        <image id="image0" />
+    </vstack>
+```
+
+
+Attributes:
+
+- systemName : SFSymbols
+- id : image id in `Images`
+- #general attributes
+
+### vstack
+
+```
+    <vstack>
+        <text>First</text>
+        <text>Second</text>
+    </vstack>
+```
+
+Attributes:
+
+- #general attributes
+
+### hstack
+
+```
+    <hstack>
+        <text>First</text>
+        <text>Second</text>
+    </hstack>
+```
+
+Attributes:
+
+- #general attributes
+
+### zstack
+
+```
+    <zstack>
+        <text>First</text>
+        <text>Second</text>
+    </zstack>
+```
+
+Attributes:
+
+- #general attributes
+
+### spacer
+
+```
+    <hstack>
+        <text>First</text>
+        <spacer/>
+        <text>Second</text>
+    </hstack>
+```
+
+Attributes:
+
+- #general attributes
+
+
+### date
+
+```
+    <date font="caption" date="now" style="time" />
+    <date font="caption" date="now" style="date" />
+    <date font="caption" date="start of today" style="timer" />
+    <date font="title" date={Date.now()} style="timer" />
+```
+
+Attributes:
+
+- date
+- style
+- font
+- color
+- #general attributes
+
+## Component Attributes
+
+
+
+### background (#general attributes)
+
+
+### frame (#general attributes)
+
+
+### padding (#general attributes)
+
+
+
+### date (date)
+
+
+### style (date)
+
+
+### font (date|text)
+
+
+### color (date|text)
+
+
+
+## APIs
+
+
+### $render
+
+`$render` is the most core api, it specified the ui structure.
+
+```
+$render(
+  <vstack frame="max">
+    <text font="title">Hello ScriptWidget</text>
+    <text font="caption" color="red">
+      Hello ScriptWidget
+    </text>
+    <text font="caption" background="blue" color="white">
+      Hello ScriptWidget
+    </text>
+  </vstack>
+);
+
+```
+
+
+### console
+
+```
+console.log("Hello ScriptWidget");
+
+```
+
+
+### fetch
+
+```
+// fetch
+const url = "https://jsonplaceholder.typicode.com/todos/1";
+const result = await fetch(url);
+const model = JSON.parse(result); // result is string , and model is object
+
+
+// fetch with header
+const url = "https://api.github.com/users/everettjf/orgs";
+const result = await fetch(url, {
+  headers: {
+    Accept: "application/vnd.github.inertia-preview+json",
+  },
+});
+const models = JSON.parse(result);
+```
+
+
+### $device
+
+```
+console.log($device.name());
+console.log($device.model());
+console.log($device.language());
+console.log($device.systemVersion());
+console.log(JSON.stringify($device.screen(), null, 2));
+console.log(JSON.stringify($device.battery(), null, 2));
+console.log($device.isdarkmode());
+
+```
+
+
+### $gradient
+
+`$gradient` works with `background` and `color` attributes.
+
+```
+let linearGradient = {
+  type: "linear",
+  colors: ["blue", "white", "pink"],
+  startPoint: "topLeading",
+  endPoint: "bottomTrailing",
+};
+
+let angularGradient = {
+  type: "angular",
+  colors: ["green", "blue", "black", "green", "blue", "black", "green"],
+  center: "center",
+};
+
+let radialGradient = {
+  type: "radial",
+  colors: ["orange", "red", "white"],
+  center: "center",
+  startRadius: 100,
+  endRadius: 470,
+};
+
+$render(
+  <vstack background={$gradient(linearGradient)} frame="max">
+    <text font="title">LinearGradient</text>
+  </vstack>
+);
+
+```
+
+
+
+## Enjoy coding
+
+:)

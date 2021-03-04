@@ -12,28 +12,27 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        ScriptWidget lets you focus on your widget structure. The engine 
+        inside could transform JSX label style (like ReactJS) code into JavaScript, 
+        makes building widgets easy.
       </>
     ),
   },
   {
     title: 'JavaScript embedded',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        ScriptWidget support tranditional JavaScript.
       </>
     ),
   },
   {
     title: 'Powered by SwiftUI',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        ScriptWidget is built with 95% SwiftUI.
       </>
     ),
   },
