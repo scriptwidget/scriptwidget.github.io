@@ -1,5 +1,5 @@
 ---
-id: doc-getstarted
+id: getstarted
 title: Get started
 sidebar_label: Get started
 slug: /
@@ -21,407 +21,50 @@ ScriptWidget is an iOS app that we can create widgets for iOS using JSX label st
 
 
 
-## Templates
+## Quick start
 
-- Battery Percent: Display system battery percentage
-- Clock: Display Clock Time
-- Image: Display Image/Photo
-- Is Friday Today: Demo for how to check is friday today
-- Weather: Demo for how get current weather for city
-- Year Days Left: Demo for how to display how many days left this year
+### Create script
 
+Tap top-right plus button to `Create from templates`:
 
-## Components
 
-### text
+![img](../static/img/create.png)
 
-```
-    <text font="title">Hello ScriptWidget</text>
-    <text font="caption" color="red">
-      Hello ScriptWidget
-    </text>
-    <text font="caption" background="blue" color="white">
-      Hello ScriptWidget
-    </text>
-```
+For example, choose `Is Friday Today`, then tap `Create` button at top-right.
 
-Attributes:
 
-- font
-- color
-- #general attributes
 
+### Add widget
 
-### image
+1. Long press desktop, then follow steps below.
+2. Find `ScriptWidget` and tap.
+3. Choose widget size
+4. Tap widget when `No script selected` and select a script
+5. You can also select script update frequency.
+6. Then widget is ready.
 
-```
-    <vstack>
-        <image systemName="mosaic.fill" />
-        <image id="image0" />
-    </vstack>
-```
 
+![img](../static/img/step/step1.png)
+![img](../static/img/step/step2.png)
+![img](../static/img/step/step3.png)
+![img](../static/img/step/step4.png)
+![img](../static/img/step/step5.png)
+![img](../static/img/step/step6.png)
 
-Attributes:
 
-- systemName : SFSymbols
-- id : image id in `Images`
-- #general attributes
+## Develop widget
 
-### vstack
+For how to develop widget. ref: [Develop widget](/docs/develop)
 
-```
-    <vstack>
-        <text>First</text>
-        <text>Second</text>
-    </vstack>
-```
 
-Attributes:
+## iCloud
 
-- #general attributes
+If iCloud is ready, you could find script in `Files` app : `ScriptWidget` folder.
 
-### hstack
 
-```
-    <hstack>
-        <text>First</text>
-        <text>Second</text>
-    </hstack>
-```
+## Group
 
-Attributes:
-
-- #general attributes
-
-### zstack
-
-```
-    <zstack>
-        <text>First</text>
-        <text>Second</text>
-    </zstack>
-```
-
-Attributes:
-
-- #general attributes
-
-### spacer
-
-```
-    <hstack>
-        <text>First</text>
-        <spacer/>
-        <text>Second</text>
-    </hstack>
-```
-
-Attributes:
-
-- #general attributes
-
-
-### date
-
-```
-    <date font="caption" date="now" style="time" />
-    <date font="caption" date="now" style="date" />
-    <date font="caption" date="start of today" style="timer" />
-    <date font="title" date={Date.now()} style="timer" />
-```
-
-Attributes:
-
-- date
-- style
-- font
-- color
-- #general attributes
-
-## Component Attributes
-
-
-
-### background (#general attributes)
-
-```
-background="red"
-```
-
-ref Color
-
-
-### frame (#general attributes)
-
-- max
-- max,#alignment
-- width,height
-- width,height,#alignment
-
-Example:
-
-```
-max
-max,leading
-100,50
-100,50,leading
-```
-
-
-`#alignment`
-
-- center
-- leading
-- trailing
-- top
-- bottom
-- topLeading
-- topTrailing
-- bottomLeading
-- bottomTrailing
-
-
-### padding (#general attributes)
-
-
-```
-// padding all
-padding="10"
-
-
-// padding edge
-padding="top,10"
-
-- top
-- leading
-- bottom
-- trailing
-- all
-- horizontal
-- vertical
-
-
-// padding top,trailing,bottom,leading
-padding="10,20,30,40"
-
-
-
-```
-
-
-
-### date (date)
-
-
-```
-// string date
-date="now"
-date="start of today"
-
-- now
-- tomorrow
-- yesterday
-- start of today
-
-
-
-// the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC
-date={Date.now()}
-date="1614870428904"
-
-
-```
-
-
-### style (date)
-
-```
-style="timer"
-
-- time
-- date
-- relative
-- offset
-- timer
-
-
-```
-
-
-### font (date|text)
-
-
-```
-// font string name
-font="title"
-
-- largeTitle
-- title
-- title2
-- title3
-- headline
-- subheadline
-- body
-- callout
-- footnote
-- caption
-- caption2
-
-// font with size
-font="20"
-font="70"
-
-```
-
-
-### color (date|text)
-
-```
-color="red"
-```
-
-ref Color
-
-## Color
-
-
-```
-// color string name
-color="red"
-
-- clear
-- black
-- white
-- gray
-- red
-- green
-- blue
-- orange
-- yellow
-- pink
-- purple
-- primary
-- secondary
-
-
-
-// hex color string
-color="#ff00ff"
-
-
-// opacity
-color="red,0.5"
-color="#ff00ff,0.5"
-
-
-// gradient color
-
-ref $gradient
-
-```
-
-
-
-## APIs
-
-
-### $render
-
-`$render` is the most core api, it specified the ui structure.
-
-```
-$render(
-  <vstack frame="max">
-    <text font="title">Hello ScriptWidget</text>
-    <text font="caption" color="red">
-      Hello ScriptWidget
-    </text>
-    <text font="caption" background="blue" color="white">
-      Hello ScriptWidget
-    </text>
-  </vstack>
-);
-
-```
-
-
-### console
-
-```
-console.log("Hello ScriptWidget");
-
-```
-
-
-### fetch
-
-```
-// fetch
-const url = "https://jsonplaceholder.typicode.com/todos/1";
-const result = await fetch(url);
-const model = JSON.parse(result); // result is string , and model is object
-
-
-// fetch with header
-const url = "https://api.github.com/users/everettjf/orgs";
-const result = await fetch(url, {
-  headers: {
-    Accept: "application/vnd.github.inertia-preview+json",
-  },
-});
-const models = JSON.parse(result);
-```
-
-
-### $device
-
-```
-console.log($device.name());
-console.log($device.model());
-console.log($device.language());
-console.log($device.systemVersion());
-console.log(JSON.stringify($device.screen(), null, 2));
-console.log(JSON.stringify($device.battery(), null, 2));
-console.log($device.isdarkmode());
-
-```
-
-
-### $gradient
-
-`$gradient` works with `background` and `color` attributes.
-
-```
-let linearGradient = {
-  type: "linear",
-  colors: ["blue", "white", "pink"],
-  startPoint: "topLeading",
-  endPoint: "bottomTrailing",
-};
-
-let angularGradient = {
-  type: "angular",
-  colors: ["green", "blue", "black", "green", "blue", "black", "green"],
-  center: "center",
-};
-
-let radialGradient = {
-  type: "radial",
-  colors: ["orange", "red", "white"],
-  center: "center",
-  startRadius: 100,
-  endRadius: 470,
-};
-
-$render(
-  <vstack background={$gradient(linearGradient)} frame="max">
-    <text font="title">LinearGradient</text>
-  </vstack>
-);
-
-```
-
+Welcome to join [Group](/docs/group)
 
 
 ## Enjoy coding
