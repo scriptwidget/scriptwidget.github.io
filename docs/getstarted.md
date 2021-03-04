@@ -11,13 +11,15 @@ slug: /
 ## Introduction
 
 
-hello
+ScriptWidget is an iOS app that we can create widgets for iOS using JSX label style in JavaScript.
 
 
 ## Screenshots
 
 
 ![img](../static/img/screenshot.jpg)
+
+
 
 ## Templates
 
@@ -143,24 +145,177 @@ Attributes:
 
 ### background (#general attributes)
 
+```
+background="red"
+```
+
+ref Color
+
 
 ### frame (#general attributes)
 
+- max
+- max,#alignment
+
+Example:
+
+```
+max
+max,leading
+```
+
+
+`#alignment`
+
+- center
+- leading
+- trailing
+- top
+- bottom
+- topLeading
+- topTrailing
+- bottomLeading
+- bottomTrailing
+
 
 ### padding (#general attributes)
+
+
+```
+// padding all
+padding="10"
+
+
+// padding edge
+padding="top,10"
+
+- top
+- leading
+- bottom
+- trailing
+- all
+- horizontal
+- vertical
+
+
+// padding top,trailing,bottom,leading
+padding="10,20,30,40"
+
+
+
+```
 
 
 
 ### date (date)
 
 
+```
+// string date
+date="now"
+date="start of today"
+
+- now
+- tomorrow
+- yesterday
+- start of today
+
+
+
+// the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC
+date={Date.now()}
+date="1614870428904"
+
+
+```
+
+
 ### style (date)
+
+```
+style="timer"
+
+- time
+- date
+- relative
+- offset
+- timer
+
+
+```
 
 
 ### font (date|text)
 
 
+```
+// font string name
+font="title"
+
+- largeTitle
+- title
+- title2
+- title3
+- headline
+- subheadline
+- body
+- callout
+- footnote
+- caption
+- caption2
+
+// font with size
+font="20"
+font="70"
+
+```
+
+
 ### color (date|text)
+
+```
+color="red"
+```
+
+ref Color
+
+## Color
+
+
+```
+// color string name
+color="red"
+
+- clear
+- black
+- white
+- gray
+- red
+- green
+- blue
+- orange
+- yellow
+- pink
+- purple
+- primary
+- secondary
+
+
+
+// hex color string
+color="#ff00ff"
+
+
+// opacity
+color="red,0.5"
+color="#ff00ff,0.5"
+
+
+// gradient color
+
+ref $gradient
+
+```
 
 
 

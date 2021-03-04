@@ -1,6 +1,5 @@
 module.exports = {
   someSidebar: {
-    Documents: ['doc-getstarted'],
-    Groups: ['group'],
+    Documents: ['doc-getstarted', 'group'],
   },
 };
