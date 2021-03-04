@@ -156,12 +156,16 @@ ref Color
 
 - max
 - max,#alignment
+- width,height
+- width,height,#alignment
 
 Example:
 
 ```
 max
 max,leading
+100,50
+100,50,leading
 ```
 
 
