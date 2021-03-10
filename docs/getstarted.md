@@ -20,6 +20,11 @@ ScriptWidget is an iOS app that we can create widgets for iOS using JSX label st
 ![img](../static/img/screenshot.jpg)
 
 
+## Download
+
+- us https://apps.apple.com/us/app/scriptwidget/id1555600758
+- cn https://apps.apple.com/cn/app/scriptwidget/id1555600758
+
 
 ## Quick start
 
