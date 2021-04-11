@@ -28,10 +28,12 @@ Attributes:
 ### image
 
 ```
-    <vstack>
-        <image systemName="mosaic.fill" />
-        <image id="image0" />
-    </vstack>
+  <vstack>
+    <image />
+    <image systemName="mosaic.fill" />
+    <image id="image0" />
+    <image url="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" frame="20,20"/>
+  </vstack>
 ```
 
 
@@ -112,6 +114,77 @@ Attributes:
 - color
 - #general attributes
 
+### rect
+
+```
+$render(
+  <vstack frame="max">
+    <rect frame="50,30" color="blue"></rect>
+    <rect frame="50,30" color="blue" corner="5"></rect>
+  </vstack>
+);
+```
+
+### circle
+
+```
+  <vstack frame="max">
+    <circle frame="50,50" color="blue"></circle>
+  </vstack>
+```
+
+### ellipse
+
+```
+  <vstack frame="max">
+    <ellipse frame="50,30" color="blue"></ellipse>
+  </vstack>
+```
+
+### capsule
+
+```
+  <vstack frame="max">
+    <capsule frame="50,30" color="blue"></capsule>
+  </vstack>
+
+```
+
+
+
+
+### guage
+
+```
+
+var percent = $device.battery().level * 100;
+percent = percent.toFixed(0);
+
+let gaugeSections = [
+  {color: "yellow", value: 0.1},
+  {color: "blue", value: 0.2},
+  {color: "orange", value: 0.3},
+  {color: "green", value: 0.4},
+];
+
+$render(
+  <vstack frame="max">
+    <gauge 
+      angle="260" 
+      value={percent/100}
+      thickness="10" 
+      label={percent + "%"} labelFont="caption"
+      title="BATTERY" titleFont="caption"
+      sections={$json(gaugeSections)}
+      >
+    </gauge>
+  </vstack>
+);
+
+```
+
+
+
 ## Component Attributes
 
 
@@ -187,6 +260,7 @@ padding="10,20,30,40"
 ### date (date)
 
 
+
 ```
 // string date
 date="now"
@@ -202,8 +276,6 @@ date="start of today"
 // the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC
 date={Date.now()}
 date="1614870428904"
-
-
 ```
 
 
@@ -395,6 +467,127 @@ $render(
 
 ```
 
+### $getenv
+
+`$getenv` can get several environment state. But for now, getenv only support `widget-size`.
+
+
+```
+/*
+ widget-size
+ - large
+ - medium
+ - small
+*/
+const widget_size = $getenv("widget-size");
+
+if (widget_size == "small") {
+  //...
+}
+```
+
+
+### $json
+
+`$json` used for some complex attributes. It simply called `JSON.stringfy` internal.
+
+```
+var percent = $device.battery().level * 100;
+percent = percent.toFixed(0);
+
+let gaugeSections = [
+  {color: "yellow", value: 0.1},
+  {color: "blue", value: 0.2},
+  {color: "orange", value: 0.3},
+  {color: "green", value: 0.4},
+];
+
+$render(
+  <vstack frame="max">
+    <gauge 
+      value={percent/100}
+      sections={$json(gaugeSections)}
+      >
+    </gauge>
+  </vstack>
+);
+
+```
+
+
+## Animation
+
+support:
+- animation can be applied to any components.
+- only support rotation animation
+
+
+animation type:
+
+- clockSecond
+- clockMiniute
+- clockHour
+- clockCustom
+
+We use json to config animations:
+
+```
+ let animationSecond = {
+  type: "clockSecond",  // clockMinute , clockHour
+  timezone: "current",
+  anchor: "center"
+ }
+ 
+ 
+ let animationCustom = {
+  type: "clockCustom",
+  interval: 60, // 60 means 1 second , 30 means 0.5 second
+  timezone: "current",
+  anchor: "center"
+ }
+
+ $render(
+   <vstack frame="max" animation={$animation(animationSecond)}>
+     <rect frame="30,30" color="green"></rect>
+   </vstack>
+ )
+```
+
+attributes:
+
+timezone:
+- current 
+- timezone list , please ref https://stackoverflow.com/questions/47494222/getting-the-city-country-list-in-ios-time-zone
+
+
+anchor:
+
+- zero
+- center
+- leading
+- trailing
+- top
+- bottom
+- topLeading
+- topTrailing
+- bottomLeading
+- bottomTrailing
+
+
+
+Quick format for clockCustom:
+
+```
+$render(
+  <vstack frame="max" animation="clockCustom,1">
+    <circle frame="30,30" color="green"></circle>
+    <circle frame="30,30" color="pink"></circle>
+    <circle frame="30,30" color="gray"></circle>
+    <circle frame="30,90" color="orange"></circle>
+  </vstack>
+);
+
+```
 
 
 ## Enjoy coding
