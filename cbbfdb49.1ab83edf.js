@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{87:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"ScriptWidget first public release","permalink":"/blog/hola"}]}')}}]);
