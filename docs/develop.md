@@ -13,7 +13,7 @@ For how to develop a widget :
 
 For how to use script for widget: 
 
-- Get Started:  [- Go - ](/docs/getstarted)
+- Get Started:  [- Go - ](/docs/)
 
 
 
