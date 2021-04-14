@@ -184,6 +184,35 @@ $render(
 ```
 
 
+### link
+
+- `linkurl` can be applied to root component.
+- <link url=""></link> only work under "Medium" and "Large" widgets.
+
+```
+
+$render(
+  <vstack frame="max" linkurl="https://scriptwidget.app">
+    <link url="https://www.baidu.com" background="blue">
+      <text font="title">Hello Baidu</text>
+    </link>
+    <link url="https://www.google.com" background="green">
+      <hstack>
+        <text>Hello</text>
+        <text>Google</text>
+      </hstack>
+    </link>
+    <link url="https://www.bing.com" background="yellow">
+      <vstack>
+        <text>Hello</text>
+        <text>Bing</text>
+      </vstack>
+    </link>
+  </vstack>
+);
+
+```
+
 
 ## Component Attributes
 
@@ -512,6 +541,42 @@ $render(
   </vstack>
 );
 
+```
+
+
+### $http
+
+- $http.get
+- $http.post
+- $http.put
+- $http.patch
+- $http.delete
+
+
+The second parameter for each api supports: 
+
+- headers
+- body : usually usefull for post body
+
+```
+const result = await $http.get("https://jsonplaceholder.typicode.com/todos/1");
+const result = await $http.post("https://jsonplaceholder.typicode.com/posts", {
+  body: {
+    userId: 1,
+    id: 1,
+    title: "Hello ScriptWidget",
+  }
+});
+const result = await $http.post("https://jsonplaceholder.typicode.com/posts", {  
+  headers: {
+    Accept: "application/vnd.github.inertia-preview+json",
+  },
+  body: {
+    userId: 1,
+    id: 1,
+    title: "Hello ScriptWidget",
+  }
+});
 ```
 
 
