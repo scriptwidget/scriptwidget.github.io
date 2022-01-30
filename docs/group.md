@@ -5,10 +5,9 @@ title: Join group
 
 
 
-- [Twitter](https://weibo.com/scriptwidget) 
+- [Twitter](https://weibo.com/everettjf) 
 - [Telegram](https://t.me/scriptwidgetapp)
-- [微博](https://weibo.com/scriptwidget)
-- 微信：下图扫码关注，回复`w`即可加群。
 
+也欢迎关注我维护的订阅号：
 
 ![img](../static/img/wechat.jpg)
