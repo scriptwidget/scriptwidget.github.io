@@ -18,6 +18,7 @@ ScriptWidget is an iOS and macOS app that we can create widgets for iOS and macO
 
 
 ![img](../static/img/screenshot.jpg)
+![img](../static/img/screenshot_mac.png)
 
 
 ## Download
