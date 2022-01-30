@@ -11,7 +11,7 @@ slug: /
 ## Introduction
 
 
-ScriptWidget is an iOS app that we can create widgets for iOS using JSX label style in JavaScript.
+ScriptWidget is an iOS and macOS app that we can create widgets for iOS and macOS using JSX label style in JavaScript.
 
 
 ## Screenshots
@@ -22,9 +22,10 @@ ScriptWidget is an iOS app that we can create widgets for iOS using JSX label st
 
 ## Download
 
+iOS / macOS
+
 - us https://apps.apple.com/us/app/scriptwidget/id1555600758
 - cn https://apps.apple.com/cn/app/scriptwidget/id1555600758
-
 
 ## Quick start
 
