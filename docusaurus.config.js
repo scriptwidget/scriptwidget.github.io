@@ -22,7 +22,7 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/ScriptWidget',
           label: 'GitHub',
@@ -50,20 +50,12 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/ScriptWidget',
-            },
-            {
               label: 'Telegram',
               href: 'https://t.me/scriptwidgetapp',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/ScriptWidget',
-            },
-            {
-              label: 'Weibo',
-              href: 'https://weibo.com/fullstackdev',
+              href: 'https://twitter.com/everettjf',
             },
           ],
         },
