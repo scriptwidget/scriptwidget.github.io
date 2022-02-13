@@ -17,7 +17,7 @@ From ScriptWidget 3.x version, ScriptWiget support marketplace where everyone co
 
 3. Add widget name to https://github.com/ScriptWidget/marketplace/blob/main/marketplace.json
 
-4. Create merge request.
+4. Create merge request and I will receive notification and deal with the scripts soon. You could contact me (everettjf) in the following groups.
 
 
 # Discuss Group
