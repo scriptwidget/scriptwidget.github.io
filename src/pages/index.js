@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const features = [
   {
     title: 'JSX label style coding',
-    imageUrl: 'img/home/screenshot1.png',
+    imageUrl: 'img/home/1.svg',
     description: (
       <>
         ScriptWidget lets you focus on your widget structure. The engine
@@ -20,7 +20,7 @@ const features = [
   },
   {
     title: 'JavaScript embedded',
-    imageUrl: 'img/home/screenshot2.png',
+    imageUrl: 'img/home/2.svg',
     description: (
       <>
         ScriptWidget support tranditional JavaScript.
@@ -29,7 +29,7 @@ const features = [
   },
   {
     title: 'Powered by SwiftUI',
-    imageUrl: 'img/home/screenshot3.png',
+    imageUrl: 'img/home/3.svg',
     description: (
       <>
         ScriptWidget is built with 95% SwiftUI.
