@@ -53,6 +53,10 @@ module.exports = {
               href: 'https://t.me/scriptwidgetapp',
             },
             {
+              label: 'Discord',
+              href: 'https://discord.gg/eGzEaP6TzR',
+            },
+            {
               label: 'Twitter',
               href: 'https://twitter.com/everettjf',
             },
