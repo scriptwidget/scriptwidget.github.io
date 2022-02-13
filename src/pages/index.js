@@ -12,8 +12,8 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        ScriptWidget lets you focus on your widget structure. The engine 
-        inside could transform JSX label style (like ReactJS) code into JavaScript, 
+        ScriptWidget lets you focus on your widget structure. The engine
+        inside could transform JSX label style (like ReactJS) code into JavaScript,
         makes building widgets easy.
       </>
     ),
@@ -38,7 +38,7 @@ const features = [
   },
 ];
 
-function Feature({imageUrl, title, description}) {
+function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx('col col--4', styles.feature)}>
@@ -55,11 +55,11 @@ function Feature({imageUrl, title, description}) {
 
 function Home() {
   const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
+  const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`${siteConfig.title} - Create Widgets for iOS using JSX label style in JavaScript`}
-      description="ScriptWidget - Create Widgets for iOS using JSX label style in JavaScript">
+      title={`${siteConfig.title} - Create Widgets for iOS and macOS using JSX label style in JavaScript`}
+      description="ScriptWidget - Create Widgets for iOS and macOS  using JSX label style in JavaScript">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>

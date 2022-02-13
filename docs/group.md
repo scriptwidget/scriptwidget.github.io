@@ -3,11 +3,15 @@ id: group
 title: Join group
 ---
 
+# group
 
+1. Discord : https://discord.gg/eGzEaP6TzR
+2. Telegram : https://t.me/scriptwidgetapp
+
+
+# my social
 
 - [Twitter](https://weibo.com/everettjf) 
-- [Telegram](https://t.me/scriptwidgetapp)
 
-也欢迎关注我维护的订阅号：
-
+也欢迎关注我维护的微信订阅号：
 ![img](../static/img/wechat.jpg)
