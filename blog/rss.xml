@@ -4,15 +4,8 @@
         <title>ScriptWidget Blog</title>
         <link>https://scriptwidget.app/blog</link>
         <description>ScriptWidget Blog</description>
-        <lastBuildDate>Sat, 06 Mar 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 25 Oct 2015 23:29:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
-        <item>
-            <title><![CDATA[ScriptWidget first public release]]></title>
-            <link>https://scriptwidget.app/blog/hola</link>
-            <guid>hola</guid>
-            <pubDate>Sat, 06 Mar 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[first release]]></description>
-        </item>
     </channel>
 </rss>
