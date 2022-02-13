@@ -1,6 +1,6 @@
 ---
 id: marketplace
-title: ScriptWidget Marketplace
+title: Marketplace
 ---
 
 
